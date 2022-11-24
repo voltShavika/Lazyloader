@@ -53,13 +53,13 @@ function App(){
         <div className="row">
           {
               profiles.map((profile, i) => {
-                var src = "https://avatars.dicebear.com/api/adventurer/" + profile.body + ".svg"
+                var src = "https://avatars.dicebear.com/api/adventurer/" + profile.username + ".svg"
                 
                 if(profiles.length === i+1){
-                  return <Card innerRef={lastProfileElementRef} key={i} name={profile.body} src={src}/>
+                  return <Card innerRef={lastProfileElementRef} key={i} name={profile.username} src={src}/>
                 }
                 else{
-                  return <Card key={i} name={profile.body} src={src}/>
+                  return <Card key={i} name={profile.username} src={src}/>
                 }
               })
           }

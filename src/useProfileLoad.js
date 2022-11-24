@@ -12,15 +12,15 @@ export default function useProfileLoad(pageNumber) {
         setLoading(true);
         axios({
             method: 'GET',
-            url: "https://mockend.com/voltShavika/Lazyloader/comments",
-            params: {offset: pageNumber*8, limit: 8}
+            url: "https://dummyjson.com/users",
+            params: {skip: pageNumber*8, limit: 8}
         }).then(res => {
-            console.log("Fetched Profiles " + res.data.length);
+            console.log("Fetched Profiles " + res.data.users.length);
             setProfiles(prevProfiles => {
-                return [...prevProfiles, ...res.data]
+                return [...prevProfiles, ...res.data.users]
             });
             setLoading(false);
-            setHasMore(res.data.length > 0);
+            setHasMore(res.data.users.length > 0);
         }).catch(e => {
             console.log("Error is Axios");
         })
