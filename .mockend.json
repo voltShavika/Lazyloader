@@ -1,7 +1,7 @@
 
 {
   "User": {
-    "name": { "string": {} },
+    "name": { "string": {} }
   },
   "Post": {
     "title": { "string": {} },
