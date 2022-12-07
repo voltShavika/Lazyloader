@@ -23,6 +23,9 @@ A ReactJS app that uses a mockend server to load list of profiles and load their
 
 - Using Mockend api from typicode to generate Fake APIs
 - Configured in `.mockend.json` 
+- Replaced mockend api with https://dummyjson.com/users?skip=10&limit=10 , due to Api call limitations of mockend
+
+
 
 
 
